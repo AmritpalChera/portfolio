@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type ="text/css" href="{{url_for('static', filename='styles.css')}}"/>
+        <script src="{{url_for('static', filename='js/app.js')}}"></script>
+        {% if title %}
+            <title id="title">Chera: {{title}}</title>
+        {% else %}
+            <title>Chera</title>
+        {% endif %}
+    </head>
+    <body>
+        <header id = "header"></header>
+        {% block HomePage %} {% endblock %}
+        {% block AboutContent %} {%endblock%}
+        <footer id = "footer"></footer>
+    </body>
+</html>
